@@ -74,7 +74,7 @@ h1 {
 
 /* Header */
 header {
-    background: url('../img/poem_background.jpg') no-repeat;
+    background: url('poem_background.jpg') no-repeat;
     background-size: cover;
     margin: auto;
     padding: 10px 0;
@@ -83,7 +83,7 @@ header {
 }
 
 .contact-page header {
-    background: url('../img/contact.jpg');
+    background: url('contact.jpg');
     background-size: cover;
     margin: auto;
     padding: 10px 0;
