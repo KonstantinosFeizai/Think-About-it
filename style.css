@@ -19,10 +19,6 @@ a {
     color: rgb(255, 255, 255);
 }
 
-h1 {
-    padding-bottom: 20px;
-}
-
 .text-primary {
     color: rgb(207, 82, 82)
 }
@@ -31,6 +27,9 @@ h1 {
     font-size: 25px;
 }
 
+.logo a:hover {
+    color: rgb(207, 82, 82)
+}
 
 
 .material-symbols-outlined {
@@ -47,12 +46,15 @@ h1 {
 
     color: rgb(207, 82, 82);
     transition: all 0.5s ease-in-out;
-
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 
 .material-symbols-outlined:hover {
     color: #000;
 }
+
 
 .button {
     display: inline-block;
@@ -60,7 +62,7 @@ h1 {
     color: white;
     background: rgb(207, 82, 82);
     padding: 10px 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     border-radius: 30px;
     border: none;
     cursor: pointer;
@@ -74,34 +76,30 @@ h1 {
 
 /* Header */
 header {
-    background: url('poem_background.jpg') no-repeat;
+    background: url('../img/poem_background.jpg') no-repeat;
     background-size: cover;
-    margin: auto;
-    padding: 10px 0;
     height: 100vh;
-    opacity: 0.85;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
 }
 
-.contact-page header {
-    background: url('contact.jpg');
-    background-size: cover;
-    margin: auto;
-    padding: 10px 0;
-    height: 100vh;
-    opacity: 0.85;
-}
 
-.container {
+
+
+
+/* navbar */
+
+.nav-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    justify-items: center;
+    align-items: center;
 }
 
-/* navbar */
 #navbar {
-    color: #ffffff;
-    overflow: auto;
+    overflow: hidden;
 }
 
 #navbar ul {
@@ -109,7 +107,7 @@ header {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-around;
+
 }
 
 #navbar ul li {
@@ -137,18 +135,24 @@ header {
     /* Smooth transition for hover effects */
 }
 
-h1.logo a:hover {
-    color: rgb(207, 82, 82)
-}
 
 /* Showcase */
 
-#showcase .showcase-content {
+#showcase {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    margin-top: 150px;
+}
+
+
+.showcase-content {
+    /* text-align: center; */
     color: #ffffff;
-    padding-top: 280px;
-
-
+    max-width: 800px;
+    /* margin: auto; */
 }
 
 #showcase .showcase-content h1 {
@@ -188,18 +192,15 @@ h1.logo a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    justify-items: center;
     position: relative;
 }
 
 .poem {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-}
-
-#main-content .poem {
+    text-align: center;
     width: 400px;
     height: 400px;
     padding: 20px 20px;
@@ -207,6 +208,7 @@ h1.logo a:hover {
     border: burlywood 3px solid;
     box-shadow: 2px 2px 5px #db9393;
 }
+
 
 #main-content .poem h1 {
     font-size: 1.5em;
@@ -292,29 +294,41 @@ h1.logo a:hover {
 
 footer {
     background-color: beige;
-    height: 210px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    padding-top: 20px;
     border-top: solid 1px;
+    height: 100%;
 }
-
-footer a {
-    color: #000000;
-    font-size: 1em;
-    font-weight: bold;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 0 25px;
-}
-
 
 .footer-link {
-    margin: 25px;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+footer a {
+    color: #000;
+    font-size: 1em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+
+footer h1 {
+    margin: 10px 0;
+    font-size: 1.5em;
 }
 
 footer p {
@@ -336,27 +350,33 @@ footer span:hover {
 
 /* contact form */
 
-.contact-section {
+#contact-section {
     background-color: beige;
-    padding: 60px 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 600px;
+    padding: 60px 20px;
+    overflow-x: hidden;
 }
 
 .contact-container {
     max-width: 600px;
-    width: 100%;
     text-align: left;
+    padding: 0 20px;
+    width: 100%;
 }
 
 .contact-intro {
     margin-bottom: 30px;
     font-size: 1.1rem;
-    color: #222;
+    color: #000000;
+    font-weight: bold;
 }
 
 .contact-form input,
 .contact-form textarea {
+    color: #961717;
     width: 100%;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -389,4 +409,179 @@ footer span:hover {
 .contact-form button:hover {
     background-color: #fff;
     color: #000;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+
+    header {
+        justify-content: space-between;
+        max-height: 100%;
+    }
+
+    /* Adjust container width */
+    .nav-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        padding: 200px;
+    }
+
+    /* Navbar adjustments */
+    #navbar ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #navbar ul li {
+        margin: 10px 0;
+    }
+
+    /* Showcase adjustments */
+    #showcase {
+        margin-top: 0px;
+        height: 500px;
+    }
+
+    /* 
+    #showcase .showcase-content {
+        padding-top: 150px;
+    } */
+
+    #showcase .showcase-content h1 {
+        font-size: 2em;
+    }
+
+    #showcase .showcase-content p {
+        font-size: 1em;
+    }
+
+    /* Poem section adjustments */
+    #main-content .poem {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    #main-content .poem h1 {
+        font-size: 1.2em;
+    }
+
+    #main-content .poem p {
+        font-size: 1em;
+    }
+
+    .view-posts {
+        position: static;
+        /* Removes absolute positioning */
+        margin: 20px 0;
+        /* Adds spacing below the poem */
+    }
+
+    /* Footer adjustments */
+    footer {
+        font-size: 0.9em;
+    }
+
+    .footer-link a {
+        font-size: 0.8em;
+    }
+
+
+    /* Contact page resposiveness */
+
+
+
+    .contact-container {
+        padding: 0 10px;
+    }
+
+    .contact-intro {
+        font-size: 1.1rem;
+    }
+
+    .contact-form button {
+
+        padding: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Further adjustments for smaller screens */
+    header {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #navbar ul li {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    #showcase .showcase-content h1 {
+        font-size: 1.5em;
+    }
+
+    #showcase .showcase-content p {
+        font-size: 0.9em;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    #main-content .poem {
+        padding: 10px;
+    }
+
+    #main-content .poem h1 {
+        font-size: 1em;
+    }
+
+    #main-content .poem p {
+        font-size: 0.9em;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+
+    .footer-link a {
+        font-size: 0.7em;
+    }
+
+    /*  Contact page  */
+
+    .contact-container {
+        max-width: 100%;
+        padding: 5px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.95em;
+    }
+
+    .contact-form button {
+        font-size: 0.95em;
+        padding: 10px 0;
+    }
+
 }

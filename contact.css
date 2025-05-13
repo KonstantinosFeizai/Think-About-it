@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Body */
 
 html,
 body {
@@ -61,7 +60,7 @@ h1 {
 
 /* Header */
 header {
-    background: url('../img/about.jpg') no-repeat;
+    background: url('../img/contact.jpg') repeat;
     background-size: cover;
     margin: auto;
     padding: 10px 0;
@@ -75,45 +74,6 @@ header {
     justify-content: space-evenly;
     justify-items: center;
 }
-
-/* Showcase */
-
-#showcase .showcase-content {
-    text-align: center;
-    color: #ffffff;
-    padding-top: 280px;
-
-
-}
-
-#showcase .showcase-content h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    transition: all 0.5s ease-in-out;
-}
-
-#showcase .showcase-content h1 span {
-    display: inline-block;
-    transition: all 0.8s ease-in-out;
-    color: rgb(207, 82, 82);
-}
-
-#showcase .showcase-content h1 span:hover {
-    display: inline-block;
-    transform: scale(1.1);
-    transition: all 0.5s ease-in-out;
-    color: black;
-}
-
-#showcase .showcase-content p {
-    color: #f7f4f4;
-    width: auto;
-    font-weight: bold;
-    line-height: 1.7em;
-    padding-bottom: 20px;
-    text-wrap: wrap;
-}
-
 
 /* navbar */
 #navbar {
@@ -156,33 +116,45 @@ h1.logo a:hover {
     color: rgb(207, 82, 82)
 }
 
-/* section */
+/* Showcase */
 
-#main-content {
-    background-color: beige;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-}
-
-.script {
+#showcase .showcase-content {
     text-align: center;
+    color: #ffffff;
+    padding-top: 280px;
+
+
+}
+
+#showcase .showcase-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    transition: all 0.5s ease-in-out;
+}
+
+#showcase .showcase-content h1 span {
+    display: inline-block;
+    transition: all 0.8s ease-in-out;
+    color: rgb(207, 82, 82);
+}
+
+#showcase .showcase-content h1 span:hover {
+    display: inline-block;
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+    color: black;
+}
+
+#showcase .showcase-content p {
+    color: #f7f4f4;
+    width: auto;
+    font-weight: bold;
     line-height: 1.7em;
-    width: 650px;
+    padding-bottom: 20px;
+    text-wrap: wrap;
 }
 
-.script p {
-    text-align: start;
-    line-height: 1.9em;
-    padding: 10px 0;
-}
 
-.script h1 {
-    padding-top: 5px;
-    text-align: start;
-}
 
 /* Footer */
 
@@ -227,4 +199,55 @@ footer span:hover {
     transform: scale(1.1);
     transition: all 0.5s ease-in-out;
     margin: 0 10px;
+}
+
+/* contact form */
+
+.contact-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+}
+
+.contact-intro {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    font-size: 1rem;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #008c9e;
+    color: #fff;
+    padding: 10px 24px;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #007487;
 }
