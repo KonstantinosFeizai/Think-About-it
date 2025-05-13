@@ -512,13 +512,22 @@ footer span:hover {
     body {
         max-width: 100vw;
         overflow-x: hidden;
+        height: 100%;
     }
 
     header {
-        height: auto;
-        padding: 10px 0 0 0;
+        height: 100vh;
+        /* Cover the full viewport height */
+        min-height: 100svh;
+        /* Support for mobile browsers with dynamic toolbars */
+        width: 100vw;
+        padding: 0;
+        margin: 0;
         background-size: cover;
         background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
     .nav-container {
