@@ -76,7 +76,7 @@ a {
 
 /* Header */
 header {
-    background: url('../img/poem_background.jpg') no-repeat;
+    background: url('poem_background.jpg') no-repeat;
     background-size: cover;
     height: 100vh;
     display: flex;
